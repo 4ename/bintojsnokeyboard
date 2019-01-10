@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<span></span><br>
+<button onclick="a=a+String.fromCharCode(parseInt(b,c));b='';">P</button>
+<button onclick="b=b+'0'">0</button>
+<button onclick="b=b+'1'">1</button>
+<button onclick="b=b.slice(0,b.length-1)">&lt;</button>
+<button onclick="a=a.slice(0,a.length-1)">(</button>
+<button onclick="eval(a);a=''">E</button><br>
+<bin></bin>                                      
+</body>
+<script>
+a="";
+b="";
+c=2;
+setInterval(function(){
+document.getElementsByTagName("bin")[0].innerHTML=a.split("<").join("&lt;").split(">").join("&gt;").split("&").join("&amp")
+document.body.children[0].innerHTML=b;
+},1)
+
+
+</script>
+</html>
